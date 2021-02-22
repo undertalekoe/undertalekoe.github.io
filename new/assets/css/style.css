@@ -139,9 +139,9 @@ nav {
     font-size: 24px;
 }
 
-/* width800px処理 */
+/* 横幅1024px以内になったときの処理 */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     .nav-links {
         flex-direction: column;
         position: fixed;
