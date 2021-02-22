@@ -215,7 +215,7 @@ footer a, a:link, a:visited, a:hover, a:active {
 .footer-box {
     margin-left: auto;
     margin-right: auto;
-    max-width: 425px;
+    max-width: 600px;
 }
 
 .footer-button-group {
@@ -283,6 +283,6 @@ footer a, a:link, a:visited, a:hover, a:active {
         line-height: 10px;
     }
     .footer-button {
-        max-width: 100px;
+        max-width: 125px;
     }
 }
