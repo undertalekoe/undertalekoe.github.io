@@ -1,0 +1,170 @@
+@charset "utf-8";
+@font-face {
+    font-family: "DeterminationJP";
+    src: url('../fonts/DeterminationJP.ttf');
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "DeterminationJP";
+}
+
+/* nav */
+
+:root {
+    --nav-height: 6vh;
+    --nav-background: #000;
+}
+
+nav {
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    height: var(--nav-height);
+    background: var(--nav-background);
+}
+
+.logo h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    height: var(--nav-height);
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 0 15px;
+    height: var(--nav-height);
+    line-height: var(--nav-height);
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.menu {
+    cursor: pointer;
+    background: var(--nav-background);
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.menu .bar {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+    transform-origin: left;
+}
+
+.menu .bar1 {
+    margin-bottom: 5px;
+}
+
+.menu .bar3 {
+    margin-top: 5px;
+}
+
+.menu.toggle .bar1 {
+    transform-origin: left;
+    transform: rotate(45deg);
+}
+
+.menu.toggle .bar2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu.toggle .bar3 {
+    transform-origin: left;
+    transform: rotate(-45deg);
+}
+
+/* 画面1 */
+
+.screen1 {
+    min-height: 100vh;
+    padding: 0 30px 0 30px;
+    background: linear-gradient(0deg, rgba(1, 1, 1, 1), rgba(1, 1, 1, 0.3)), url(../images/だぁてぇ_back1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.screen1 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* 画面2 */
+
+.screen2 {
+    max-width: 1024px;
+    padding: 0 30px 0 30px;
+    margin: auto;
+}
+
+.border1 {
+    padding: 20px 20px 10px 20px;
+    border: solid 3px #FFF;
+}
+
+.screen2 h1 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.screen2 h2 {
+    margin: 20px 0 20px 0px;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+/* width800px処理 */
+
+@media screen and (max-width: 800px) {
+    .nav-links {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 300px;
+        height: 100%;
+        background: var(--nav-background);
+        margin-top: var(--nav-height);
+        transition: 0.5s ease-out;
+    }
+    .nav-links li {
+        height: var(--nav-height);
+        line-height: var(--nav-height);
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .menu {
+        display: block;
+        margin-left: auto;
+    }
+    .menu.toggle+.nav-links {
+        transform: translateX(-100%);
+    }
+}
