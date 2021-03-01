@@ -209,10 +209,16 @@ nav {
 }
 
 .screenbox1 h1 {
+    background-color: rgba(1, 1, 1, 0.75);
+    border: 5px solid rgba(0, 0, 0, 0);
+    display: inline-block;
     font-size: 36px;
 }
 
 .screenbox1 p {
+    background-color: rgba(1, 1, 1, 0.75);
+    border: 5px solid rgba(0, 0, 0, 0);
+    display: inline-block;
     font-size: 14px;
 }
 
